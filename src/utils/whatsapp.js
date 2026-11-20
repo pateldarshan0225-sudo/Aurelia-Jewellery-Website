@@ -1,0 +1,2 @@
+import {siteConfig} from '../config/siteConfig'; import {formatPrice} from './format';
+export function whatsappUrl(product){const message=product?`Hello, I am interested in ${product.name} (Product Code: ${product.productCode}), listed at ${formatPrice(product.price)}. Please share more details.`:'Hello, I would like to enquire about your jewellery collection.'; return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;}

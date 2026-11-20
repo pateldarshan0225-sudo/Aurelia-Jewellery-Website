@@ -1,0 +1,1 @@
+export const siteConfig = { brandName: 'AURÉLIA JEWELS', tagline: 'Timeless Elegance, Crafted for You', city: 'Surat, Gujarat, India', whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || '', email: 'Email address coming soon', address: 'Store address coming soon', phone: 'Phone number coming soon', instagram: '', facebook: '', maps: '', currency: 'INR', demoMode: true };
