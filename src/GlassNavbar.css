@@ -31,6 +31,8 @@ body:has(.hero) .glass-header{position:absolute;top:0;left:0;right:0}
 body:has(.hero) .glass-header .logo{color:#fffaf3;text-shadow:0 1px 8px rgba(0,0,0,.35)}
 body:has(.hero) .glass-nav{background:rgba(31,24,23,.45);border-color:rgba(255,245,233,.35)}
 body:has(.hero) .glass-nav a{color:#f4e7d9}
+
 body:has(.hero) .glass-header .glass-enquiry{background:#f7eee3;border-color:#f7eee3;color:#4a292e}
 body:has(.hero) .glass-header .glass-enquiry svg:first-child{color:#6b3540}
 body:has(.hero) .glass-header .glass-enquiry:hover{background:#6b3540;border-color:#6b3540;color:#fff}
+body:has(.hero) .glass-header .glass-enquiry:hover svg:first-child{color:#fffaf4}
