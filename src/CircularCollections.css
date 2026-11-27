@@ -1,0 +1,29 @@
+.circular-collections{background:#fffdf8;padding:clamp(52px,6vw,82px) 0 clamp(55px,6vw,85px);overflow:hidden}
+.circular-collections-inner{width:min(92%,1320px);margin:auto}
+.circular-collections-heading{text-align:center;margin-bottom:28px}
+.circular-collections-heading h2{font-size:clamp(2.5rem,4vw,3.7rem);line-height:1.08;margin:13px 0 0}
+.circular-collections-heading h2 em{color:#651d32}
+.circular-collections-layout{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(28px,5vw,80px)}
+.circular-collections-stage{position:relative;isolation:isolate;height:clamp(360px,33vw,440px);perspective:1100px;touch-action:pan-y}
+.circular-collections-image{position:absolute;left:50%;top:50%;margin:0 0 0 max(-31%, -195px);width:min(62%,390px);height:90%;translate:0 -50%;padding:0;border:1px solid rgba(212,175,120,.28);border-radius:22px;overflow:hidden;background:#eee3d5;box-shadow:0 16px 35px rgba(61,37,31,.13);cursor:pointer;transform-style:preserve-3d;backface-visibility:hidden}
+.circular-collections-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;user-select:none}
+.circular-collections-image:focus-visible{outline:3px solid #651d32;outline-offset:4px}
+.circular-collections-image--active{cursor:default}
+.circular-collections-content{max-width:470px}
+.circular-collections-copy{min-height:180px;padding-top:15px}
+.circular-collections-copy h3{font:400 clamp(2.5rem,4vw,3.9rem)/1.05 'Cormorant Garamond',Georgia,serif;color:#292221;margin:0 0 10px}
+.circular-collections-subtitle{font:italic 1.2rem/1.25 'Cormorant Garamond',Georgia,serif;color:#651d32;margin:0 0 15px}
+.circular-collections-description{color:#685d57;font-size:.91rem;line-height:1.75;margin:0;max-width:430px}
+.circular-collections-description span{display:inline-block;white-space:pre-wrap}
+.circular-collections-link{display:inline-flex;align-items:center;gap:22px;padding:0 0 10px;border-bottom:1px solid #d4af78;color:#591d2a;text-transform:uppercase;font:600 .68rem Jost,sans-serif;letter-spacing:.12em}
+.circular-collections-link svg{transition:transform .35s}.circular-collections-link:hover svg{transform:translateX(4px)}
+.circular-collections-controls{display:flex;align-items:center;gap:14px;margin-top:30px}
+.circular-collections-controls button{display:grid;place-items:center;width:44px;height:44px;border:1px solid #d2bda9;border-radius:50%;background:transparent;color:#651d32;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.circular-collections-controls button:hover{background:#651d32;border-color:#651d32;color:#fcf9f3}
+.circular-collections-controls button:focus-visible,.circular-collections-link:focus-visible{outline:2px solid #651d32;outline-offset:4px}
+.circular-collections-counter{font:500 .7rem Jost,sans-serif;letter-spacing:.12em;color:#651d32}.circular-collections-counter span{margin:0 6px;color:#b8a298}
+.circular-collections-controls .circular-collections-pause{width:38px;height:38px;margin-left:5px}
+@media(max-width:850px){.circular-collections-layout{gap:25px}.circular-collections-stage{height:360px}.circular-collections-copy{min-height:205px}}
+@media(max-width:650px){.circular-collections{padding:50px 0 60px}.circular-collections-inner{width:calc(100% - 40px)}.circular-collections-heading{margin-bottom:12px}.circular-collections-layout{grid-template-columns:1fr;gap:20px}.circular-collections-stage{height:340px}.circular-collections-image{width:min(64%,300px);margin-left:max(-32%,-150px)}.circular-collections-content{width:100%;max-width:480px;margin:auto}.circular-collections-copy{min-height:170px}.circular-collections-controls{margin-top:25px}}
+@media(max-width:360px){.circular-collections-stage{height:300px}.circular-collections-copy{min-height:195px}}
+@media(prefers-reduced-motion:reduce){.circular-collections *{transition:none!important}}

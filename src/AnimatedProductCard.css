@@ -1,0 +1,30 @@
+﻿.collection-section .animated-product-card{position:relative;isolation:isolate;display:flex;flex-direction:column;min-width:0;min-height:440px;overflow:hidden;border:1px solid #eadfd4;border-radius:18px;background:#fffdf8;box-shadow:0 8px 25px rgba(74,45,35,.06)}
+.collection-section .animated-product-base{display:flex;flex:1;flex-direction:column;transition:opacity .4s ease}
+.collection-section .animated-product-card.is-open .animated-product-base{opacity:.34}
+.collection-section .animated-product-image{margin:8px 8px 0;overflow:hidden;border-radius:12px;background:#f4e9dd;aspect-ratio:1}
+.collection-section .animated-product-image img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.collection-section .animated-product-card.is-open .animated-product-image img{transform:scale(1.04)}
+.collection-section .animated-product-info{display:flex;flex:1;flex-direction:column;padding:17px 17px 60px}
+.collection-section .animated-product-info h3{font:400 1.4rem/1.15 'Cormorant Garamond',Georgia,serif;margin:8px 0 14px;color:#302422}
+.collection-section .animated-product-price{margin-top:auto;font-size:.95rem;color:#342726}
+.collection-section .animated-product-trigger{position:absolute;left:17px;bottom:14px;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0;border:0;background:transparent;color:#651d32;font:600 .62rem Jost,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.collection-section .animated-product-trigger svg{transition:transform .3s}.collection-section .animated-product-trigger:hover svg{transform:translateX(3px)}
+.collection-section .animated-product-overlay{position:absolute;z-index:2;inset:0;overflow:auto;overscroll-behavior:contain;padding:45px 20px 20px;background:rgba(252,248,242,.92);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);transform:translateY(101%);visibility:hidden;transition:transform .55s cubic-bezier(.22,1,.36,1),visibility 0s linear .55s}
+.collection-section .animated-product-card.is-open .animated-product-overlay{transform:translateY(0);visibility:visible;transition-delay:0s}
+.collection-section .animated-product-close{position:absolute;right:14px;top:12px;display:grid;place-items:center;width:36px;height:36px;border:1px solid #dbc6b4;border-radius:50%;background:rgba(255,253,248,.8);color:#651d32;cursor:pointer}
+.collection-section .animated-product-overlay-content{display:flex;min-height:100%;flex-direction:column}
+.collection-section .animated-product-overlay h3{font:400 1.65rem/1.05 'Cormorant Garamond',Georgia,serif;color:#48242b;margin:10px 0 12px}
+.collection-section .animated-product-description{font-size:.77rem;line-height:1.5;color:#665651;margin:0 0 12px}
+.collection-section .animated-product-spec{display:flex;flex-wrap:wrap;gap:2px 8px;margin:0 0 12px;padding-top:10px;border-top:1px solid #e5d6c6;font-size:.7rem;line-height:1.4;color:#665651}
+.collection-section .animated-product-spec dt{font-weight:600;color:#651d32}.collection-section .animated-product-spec dd{margin:0}
+.collection-section .animated-product-overlay-price{margin-top:auto;margin-bottom:14px;color:#48242b;font-size:1rem;font-weight:500}.collection-section .animated-product-overlay-price small{display:block;margin-top:3px;font-size:.65rem;font-weight:400;color:#806d61}
+.collection-section .animated-product-actions{display:grid;gap:8px}
+.collection-section .animated-product-enquire,.collection-section .animated-product-details{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:42px;padding:8px 10px;border:1px solid #651d32;border-radius:999px;font:600 .61rem Jost,sans-serif;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
+.collection-section .animated-product-enquire{background:#651d32;color:#fffaf4}.collection-section .animated-product-enquire:hover{background:#45202b}.collection-section .animated-product-details{background:transparent;color:#651d32}.collection-section .animated-product-details:hover{background:#eee2d6}.collection-section .animated-product-details svg{transition:transform .3s}.collection-section .animated-product-details:hover svg{transform:translateX(4px)}
+.collection-section .animated-product-reveal{opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.collection-section .animated-product-card.is-open .animated-product-reveal{opacity:1;transform:none;transition-delay:.18s}
+.collection-section .animated-product-card.is-open .animated-product-reveal:nth-child(2){transition-delay:.23s}.collection-section .animated-product-card.is-open .animated-product-reveal:nth-child(3){transition-delay:.28s}.collection-section .animated-product-card.is-open .animated-product-reveal:nth-child(4){transition-delay:.33s}.collection-section .animated-product-card.is-open .animated-product-reveal:nth-child(5){transition-delay:.38s}.collection-section .animated-product-card.is-open .animated-product-reveal:nth-child(6){transition-delay:.43s}
+.collection-section .animated-product-card :is(a,button):focus-visible{outline:2px solid #651d32;outline-offset:2px}
+@media(max-width:800px){.collection-section .animated-product-card{min-height:400px}}
+@media(max-width:520px){.collection-section .animated-product-card{min-height:490px}.collection-section .animated-product-info{padding:12px 12px 55px}.collection-section .animated-product-info h3{font-size:1.15rem}.collection-section .animated-product-trigger{left:12px;bottom:10px;font-size:.55rem}.collection-section .animated-product-overlay{padding:40px 12px 14px}.collection-section .animated-product-overlay h3{font-size:1.3rem}.collection-section .animated-product-description{font-size:.7rem}.collection-section .animated-product-spec{font-size:.65rem}.collection-section .animated-product-enquire,.collection-section .animated-product-details{font-size:.55rem}}
+@media(prefers-reduced-motion:reduce){.collection-section .animated-product-card *{transition:none!important}}

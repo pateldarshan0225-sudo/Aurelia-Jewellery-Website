@@ -1,0 +1,52 @@
+﻿/* A compact, image-led collection composition. */
+.home-categories{width:min(92%,1320px);max-width:1320px;margin-inline:auto;padding:clamp(54px,6vw,84px) 0 48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(21,clamp(14px,1.45vw,20px));gap:20px;align-items:stretch;background:transparent}
+.home-categories .category-grid{display:contents}
+.home-categories .category-editorial-heading{grid-column:3;grid-row:1 / 8;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;margin:0;padding:0 4px;background:none;text-align:left}
+.home-categories .category-editorial-heading h2{font-size:clamp(38px,3.3vw,48px);line-height:1.04;letter-spacing:-.035em;margin:13px 0 12px}
+.home-categories .category-editorial-heading h2 em{color:#6b3540}
+.home-categories .category-editorial-copy{max-width:320px;text-align:left}
+.home-categories .category-editorial-copy p{font-size:14px;line-height:1.6;margin:0 0 14px}
+.home-categories .category-editorial-copy .text-link{margin:0;font-size:.62rem}
+.home-categories .category-card{position:relative;display:block;min-width:0;overflow:hidden;border-radius:22px;background:#f4e9dd;box-shadow:0 5px 18px rgba(63,44,35,.07);transition:box-shadow .4s}
+.home-categories .category-necklaces{grid-column:1;grid-row:2 / 12}.home-categories .category-bracelets{grid-column:1;grid-row:12 / 19}
+.home-categories .category-earrings{grid-column:2;grid-row:1 / 10}.home-categories .category-rings{grid-column:2;grid-row:10 / 18}
+.home-categories .category-bridal{grid-column:3;grid-row:8 / 15}.home-categories .category-pendant-sets{grid-column:3;grid-row:15 / 22}
+.home-categories .category-card .category-image{display:block;width:100%;height:100%;padding:0;border:0;border-radius:0;aspect-ratio:auto;overflow:hidden;background:transparent}
+.home-categories .category-card .category-image:before{content:none}
+.home-categories .category-card .category-image img{display:block;width:100%;height:100%;padding:0;object-fit:cover;object-position:center;transform:translate3d(var(--collection-mouse-x,0px),calc(var(--collection-base-y,0%) + var(--collection-scroll-y,0px) + var(--collection-mouse-y,0px)),0) scale(var(--collection-base-scale,1.08));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.home-categories .category-necklaces .category-image img{object-position:50% 100%}
+.home-categories .category-earrings .category-image img{object-position:50% 42%}
+.home-categories .category-bracelets .category-image img{object-position:50% 100%}
+.home-categories .category-rings .category-image img{object-position:50% 42%}
+.home-categories .category-bridal .category-image img{object-position:50% 50%}
+.home-categories .category-pendant-sets .category-image img{object-position:50% 100%}
+.home-categories .category-card .category-label{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:42px;padding:4px 4px 4px 14px;border:1px solid rgba(255,255,255,.45);border-radius:999px;background:rgba(255,253,248,.62);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 3px 12px rgba(72,46,37,.08);text-align:left}
+.home-categories .category-label span:first-child{font:500 13px/1.1 Jost,sans-serif;letter-spacing:.01em;color:#5a1e2a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.home-categories .category-arrow{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#6b3540;color:#fffaf3}
+.home-categories .category-arrow svg{display:block;width:16px;color:inherit;transition:transform .35s}
+.home-categories .category-card:hover,.home-categories .category-card:focus-visible{box-shadow:0 10px 24px rgba(63,44,35,.12)}
+.home-categories .category-card:hover .category-image img,.home-categories .category-card:focus-visible .category-image img{transform:translate3d(var(--collection-mouse-x,0px),calc(var(--collection-base-y,0%) + var(--collection-scroll-y,0px) + var(--collection-mouse-y,0px)),0) scale(calc(var(--collection-base-scale,1.08) * 1.06))}
+.home-categories .category-card:hover .category-arrow svg,.home-categories .category-card:focus-visible .category-arrow svg{transform:translateX(3px)}
+@media(max-width:1000px){.home-categories{width:calc(100% - 48px);grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-auto-rows:auto;gap:20px;padding:60px 0 36px}.home-categories .category-editorial-heading{grid-column:1 / -1;grid-row:auto;padding:0 0 8px}.home-categories .category-card{grid-column:auto;grid-row:auto;aspect-ratio:1.05}.home-categories .category-necklaces,.home-categories .category-earrings{aspect-ratio:.94}.home-categories .category-bracelets,.home-categories .category-rings{aspect-ratio:1.2}.home-categories .category-bridal,.home-categories .category-pendant-sets{aspect-ratio:1.05}}
+@media(max-width:520px){.home-categories{width:calc(100% - 32px);gap:14px;padding:48px 0 30px}.home-categories .category-editorial-heading h2{font-size:38px}.home-categories .category-card{border-radius:20px}.home-categories .category-arrow{width:34px;height:34px}.home-categories .category-label span:first-child{font-size:11px}}
+@media(max-width:340px){.home-categories{grid-template-columns:1fr}.home-categories .category-editorial-heading{grid-column:1}}
+@media(max-width:520px){
+ .home-categories .category-necklaces,.home-categories .category-pendant-sets{--collection-base-y:-8%;--collection-base-scale:1.2}
+}
+@media (prefers-reduced-motion:no-preference) {
+ .home-categories .collection-reveal{opacity:0;transform:translateY(40px) scale(.96);transition:opacity .8s cubic-bezier(.22,1,.36,1) var(--collection-delay,0ms),transform .8s cubic-bezier(.22,1,.36,1) var(--collection-delay,0ms)}
+ .home-categories .collection-reveal.collection-visible{opacity:1;transform:translateY(0) scale(1)}
+ .home-categories .category-editorial-heading .collection-reveal{transform:translateY(16px)}
+ .home-categories .category-editorial-heading .collection-reveal.collection-visible{transform:translateY(0)}
+}
+.home-categories .category-card .category-label{overflow:hidden;transition:background .45s,backdrop-filter .45s,-webkit-backdrop-filter .45s}
+.home-categories .category-card .category-label::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.36) 50%,transparent 75%);transform:translateX(-140%);transition:transform .7s ease;pointer-events:none}
+.home-categories .category-card:hover .category-label,.home-categories .category-card:focus-visible .category-label{background:rgba(255,253,248,.72);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.home-categories .category-card:hover .category-label::before,.home-categories .category-card:focus-visible .category-label::before{transform:translateX(140%)}
+.home-categories .category-arrow{position:relative;transition:background-color .4s,color .4s,transform .4s}
+.home-categories .category-card:hover .category-arrow,.home-categories .category-card:focus-visible .category-arrow{background:#d4af78;color:#591d2a;transform:translateX(2px)}
+@media(prefers-reduced-motion:reduce){
+ .home-categories .category-card,.home-categories .category-card .category-image img,.home-categories .category-label,.home-categories .category-label::before,.home-categories .category-arrow,.home-categories .category-arrow svg{transition:none!important}
+ .home-categories .category-card .category-image img,.home-categories .category-card:hover .category-image img,.home-categories .category-card:focus-visible .category-image img{transform:translateY(var(--collection-base-y,0%)) scale(var(--collection-base-scale,1))}
+ .home-categories .category-card:hover .category-label::before,.home-categories .category-card:focus-visible .category-label::before{transform:translateX(-140%)}
+}

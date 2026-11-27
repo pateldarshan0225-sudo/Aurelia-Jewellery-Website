@@ -1,0 +1,37 @@
+﻿.glass-header{position:sticky;top:0;z-index:20;background:radial-gradient(ellipse at 100% 0%,#287d8a,transparent 65%),linear-gradient(110deg,#052a30,#07424a 58%,#0c5660);box-shadow:0 6px 24px rgba(0,24,28,.15)}
+.glass-header-inner{max-width:1440px;margin:auto;min-height:88px;padding:12px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.glass-header .logo{color:#fffdf8}.glass-header .logo svg{color:#cbb58e}
+.glass-nav{--active:0;position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(4,1fr);width:min(460px,45vw);padding:6px;border:1px solid rgba(211,249,255,.3);border-radius:999px;background:rgba(15,63,70,.38);box-shadow:0 10px 28px rgba(0,10,14,.2),inset 0 1px rgba(255,255,255,.1);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.glass-nav:before{content:'';position:absolute;z-index:-1;left:6px;top:6px;bottom:6px;width:calc((100% - 12px)/4);border-radius:999px;background:rgba(52,79,83,.92);box-shadow:0 5px 16px rgba(0,0,0,.16);transform:translateX(calc(var(--active)*100%));transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .2s}
+.glass-nav[data-has-active="false"]:before{opacity:0}
+.glass-nav a{min-height:48px;display:grid;place-items:center;border-radius:999px;color:rgba(239,250,250,.7);transition:color .25s,transform .25s}
+.glass-nav a:hover,.glass-nav a[aria-current="page"]{color:#fff}.glass-nav a:hover{transform:translateY(-2px)}
+.glass-nav svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.glass-header .glass-enquiry{color:#fff;border-color:rgba(255,255,255,.6);background:transparent;white-space:nowrap}.glass-header .glass-enquiry:hover{background:#fff;color:#07424a}
+@media(max-width:800px){.glass-header-inner{padding:10px 24px;min-height:72px}.glass-header .glass-enquiry{display:none}.glass-nav{width:min(400px,58vw)}}
+@media(max-width:520px){.glass-header-inner{padding:10px 16px;gap:12px}.glass-header .logo{font-size:.9rem}.glass-header .logo small{font-size:.38rem}.glass-header .logo svg{width:14px}.glass-nav{width:min(280px,65vw);padding:4px}.glass-nav:before{left:4px;top:4px;bottom:4px;width:calc((100% - 8px)/4)}.glass-nav a{min-height:42px}.glass-nav svg{width:22px;height:22px}}
+@media(prefers-reduced-motion:reduce){.glass-nav:before,.glass-nav a{transition:none}}
+
+/* Warm glass tones drawn from the site's jewellery palette. */
+.glass-header{background:radial-gradient(ellipse at 90% 0%,#efe0d0,transparent 65%),linear-gradient(110deg,#f9f3eb,#e8d8c9);box-shadow:0 6px 24px rgba(70,39,35,.09)}
+.glass-header .logo{color:#5a1e2a}.glass-header .logo svg{color:#b59159}
+.glass-nav{border-color:rgba(122,77,63,.25);background:rgba(255,253,248,.38);box-shadow:0 10px 28px rgba(83,46,39,.1),inset 0 1px rgba(255,255,255,.65)}
+.glass-nav:before{background:#6b3540;box-shadow:0 5px 16px rgba(74,32,39,.2)}
+.glass-nav a{color:#704c4a}.glass-nav a:hover{color:#5a1e2a}.glass-nav a[aria-current="page"],.glass-nav a[aria-current="page"]:hover{color:#fffaf4}
+.glass-header .glass-enquiry{color:#5a1e2a;border-color:#5a1e2a}.glass-header .glass-enquiry:hover{background:#5a1e2a;color:#fff}
+
+.glass-header .glass-enquiry{min-height:46px;padding:0 19px;gap:10px;border:1px solid #6b3540;border-radius:999px;background:#6b3540;color:#fffaf4;font-size:.62rem;letter-spacing:.11em;box-shadow:0 5px 14px rgba(90,30,42,.14);transition:background .25s,box-shadow .25s,transform .25s}
+.glass-header .glass-enquiry:hover{background:#51232e;color:#fff;box-shadow:0 8px 18px rgba(90,30,42,.2);transform:translateY(-2px)}
+.glass-header .glass-enquiry svg:first-child{flex:none;color:#ead9c5}.glass-header .glass-enquiry svg:last-child{margin-left:3px}
+/* Keep the header itself invisible around the navigation controls. */
+.glass-header{background:transparent;box-shadow:none}
+/* Let the homepage film extend behind the floating header. */
+body:has(.hero) .glass-header{position:absolute;top:0;left:0;right:0}
+
+body:has(.hero) .glass-header .logo{color:#fffaf3;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+body:has(.hero) .glass-nav{background:rgba(31,24,23,.45);border-color:rgba(255,245,233,.35)}
+body:has(.hero) .glass-nav a{color:#f4e7d9}
+body:has(.hero) .glass-nav:before{background:rgba(107,72,65,.9)}
+body:has(.hero) .glass-header .glass-enquiry{background:#f7eee3;border-color:#f7eee3;color:#4a292e}
+body:has(.hero) .glass-header .glass-enquiry svg:first-child{color:#6b3540}
+body:has(.hero) .glass-header .glass-enquiry:hover{background:#6b3540;border-color:#6b3540;color:#fff}
