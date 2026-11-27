@@ -18,5 +18,5 @@ export default function HeroVideo() {
     if (inView && documentVisible && !reduced) video.play().catch(() => {});
     else video.pause();
   }, [inView, documentVisible, reduced]);
-  return <video ref={ref} muted loop playsInline preload="metadata"><source src="/images/hero/chiaroscuro-jewelry.mp4" type="video/mp4"/></video>;
+  return <video ref={ref} muted loop playsInline preload="metadata"><source src="/images/hero/aurelia-video-clean.mp4" type="video/mp4"/></video>;
 }
